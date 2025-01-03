@@ -14,3 +14,7 @@ It provides keyboard-based navigation to make browsing faster and more efficient
 | **ArrowRight**  | Navigate to the next page of search results.           |
 | **ArrowLeft**   | Navigate to the previous page of search results.       |
 | **Focus Reset** | Automatically highlights the first link on a new page. |
+
+## License
+
+This repository is under [ISC License](./LICENSE).
