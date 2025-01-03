@@ -5,7 +5,10 @@
   "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write src",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "dev": "vite",
     "build": "tsc && vite build --emptyOutDir"
   },
@@ -18,8 +21,14 @@
   "devDependencies": {
     "@crxjs/vite-plugin": "2.0.0-beta.28",
     "@types/chrome": "^0.0.268",
+    "@typescript-eslint/eslint-plugin": "8.19.0",
+    "@typescript-eslint/parser": "8.19.0",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-define-config": "2.1.0",
+    "eslint-plugin-prettier": "5.2.1",
     "prettier": "^3.3.2",
-    "typescript": "^5.4.5",
+    "typescript": "5.7.2",
     "vite": "^5.2.13"
   },
   "type": "module"
