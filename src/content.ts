@@ -56,6 +56,7 @@ class SearchNavigator {
   private handleKeydown(event: KeyboardEvent): void {
     switch (event.key) {
       case 'ArrowDown':
+      case 'j':
         this.currentIndex = Math.min(
           this.currentIndex + 1,
           this.links.length - 1,
@@ -66,6 +67,7 @@ class SearchNavigator {
         break
 
       case 'ArrowUp':
+      case 'k':
         this.currentIndex = Math.max(this.currentIndex - 1, 0)
         this.highlightLink(this.currentIndex)
         this.saveCurrentIndex()
@@ -79,12 +81,14 @@ class SearchNavigator {
         break
 
       case 'ArrowRight':
+      case 'l':
         this.navigateToNextPage()
         this.initState()
         event.preventDefault()
         break
 
       case 'ArrowLeft':
+      case 'h':
         this.navigateToPrevPage()
         this.initState()
         event.preventDefault()
