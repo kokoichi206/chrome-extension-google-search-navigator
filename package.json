@@ -1,0 +1,25 @@
+{
+  "name": "extension",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write src",
+    "dev": "vite",
+    "build": "tsc && vite build --emptyOutDir"
+  },
+  "engines": {
+    "npm": ">=10",
+    "yarn": "Use npm instead",
+    "pnpm": "Use npm instead"
+  },
+  "author": "",
+  "devDependencies": {
+    "@crxjs/vite-plugin": "2.0.0-beta.28",
+    "@types/chrome": "^0.0.268",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.13"
+  },
+  "type": "module"
+}
