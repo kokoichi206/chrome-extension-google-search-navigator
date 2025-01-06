@@ -26,9 +26,11 @@ class SearchNavigator {
   }
 
   private fetchLinks(): void {
-    this.links = Array.from(
-      document.querySelectorAll<HTMLElement>('#search a'),
-    ).filter((link) => link.offsetParent !== null)
+    this.links = Array.from(document.querySelectorAll<HTMLElement>('#search a'))
+      .filter((link) => link.offsetParent !== null)
+      // Filter links to include only <a> tags that contain an <h3> tag.
+      // This ensures only search result titles are targeted.
+      .filter((link) => link.querySelector('h3') !== null)
   }
 
   private highlightLink(index: number): void {
