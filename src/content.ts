@@ -54,6 +54,16 @@ class SearchNavigator {
   }
 
   private handleKeydown(event: KeyboardEvent): void {
+    // Ignore keydown event if the focus is on an input or textarea element.
+    const activeElement = document.activeElement
+    if (
+      activeElement &&
+      (activeElement.tagName === 'INPUT' ||
+        activeElement.tagName === 'TEXTAREA')
+    ) {
+      return
+    }
+
     switch (event.key) {
       case 'ArrowDown':
       case 'j':
