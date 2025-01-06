@@ -66,6 +66,12 @@ class SearchNavigator {
       return
     }
 
+    // Skip handling key events if any modifier key (Ctrl, Alt, Shift, Meta) is pressed.
+    // This ensures browser shortcuts and other extensions' key bindings are not disrupted.
+    if (event.ctrlKey || event.altKey || event.shiftKey || event.metaKey) {
+      return
+    }
+
     switch (event.key) {
       case 'ArrowDown':
       case 'j':
